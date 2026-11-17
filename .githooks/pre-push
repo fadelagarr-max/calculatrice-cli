@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "Running verification before push..."
+
+mvn -B clean verify checkstyle:check
+
+if [ $? -ne 0 ]; then
+    echo "Push aborted: verification failed."
+    exit 1
+fi
+
+echo "All checks passed! Ready to push."
+exit 0
