@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "=== [Execution du pre-push hook] ==="
+mvn -B clean verify
