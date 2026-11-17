@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "=== [Execution du pre-commit hook] ==="
+mvn -B clean verify
